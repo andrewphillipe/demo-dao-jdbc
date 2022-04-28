@@ -19,7 +19,7 @@ public class Program {
 
 		Department department = new Department(2, null);
 
-		List<Seller> listSellers = sellerDao.findByDepartment(department);
+		List<Seller> listSellers = sellerDao.findAll();
 
 		for (Seller seller2 : listSellers) {
 			System.out.println(seller2);
