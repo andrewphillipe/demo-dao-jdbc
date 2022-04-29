@@ -22,15 +22,15 @@ public class Program {
 
 		seller = sellerDao.findById(9);
 
-		Department department = new Department(3, null);
-
-		seller.setName("John");
-		seller.setEmail("john@gmail.com");
-		seller.setBirthDate(new Date(sdf.parse("01/01/1990").getTime()));
-		seller.setBaseSalary(5000.00);
+		Department department = new Department(1, null);
+		
+		seller.setName("Andrew Alves");
+		seller.setEmail("andrewphillipe@hotmail.com");
+		seller.setBirthDate(new Date(sdf.parse("29/09/1991").getTime()));
+		seller.setBaseSalary(7000.00);
 		seller.setDepartment(department);
-
-		sellerDao.insert(seller);
+		
+		sellerDao.update(seller);
 
 		List<Seller> listSellers = sellerDao.findAll();
 
